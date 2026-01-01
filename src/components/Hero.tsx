@@ -22,7 +22,7 @@ const Hero = () => {
             {/* Main Heading */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl font-black text-foreground leading-[1.1] animate-fade-up animation-delay-100">
               Hi, I'm{' '}
-              <span className="text-accent">Srikar Raj</span>
+              <span className="text-accent">Srikar Raj Gudem</span>
             </h1>
             
             {/* Subheading */}
