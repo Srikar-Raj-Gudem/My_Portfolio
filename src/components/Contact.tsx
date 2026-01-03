@@ -57,7 +57,7 @@ const Contact = () => {
   const contactInfo = [
     { icon: MapPin, label: 'Location', value: 'Hyderabad, Telangana, India', href: null },
     { icon: Phone, label: 'Phone', value: '+91 9347477610', href: 'tel:+919347477610' },
-    { icon: Mail, label: 'Email', value: 'gudemsunny2405@gmail.com', href: 'mailto:gudemsunny2405@gmail.com' },
+    { icon: Mail, label: 'Email', value: 'gudemsrikar2405@gmail.com', href: 'mailto:gudemsrikar2405@gmail.com' },
     { icon: Linkedin, label: 'LinkedIn', value: 'srikar-raj-gudem', href: 'https://www.linkedin.com/in/srikar-raj-gudem' },
   ];
 
