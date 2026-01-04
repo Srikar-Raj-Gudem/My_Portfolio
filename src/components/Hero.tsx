@@ -72,7 +72,7 @@ const Hero = () => {
             
             {/* Resume Download Button */}
             <a 
-              href="/resume.pdf" 
+              href="/Srikar_Raj_Gudems_CV.pdf" 
               download="Srikar_Raj_Gudem's CV.pdf"
               className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-accent-foreground rounded-lg font-medium hover:bg-accent/90 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
