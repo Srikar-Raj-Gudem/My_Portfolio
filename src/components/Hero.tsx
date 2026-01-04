@@ -1,8 +1,37 @@
 import { ArrowRight, ChevronDown } from 'lucide-react';
+import type { MouseEvent } from 'react';
 import { Button } from '@/components/ui/button';
 import profilePhoto from '@/assets/profile-photo.jpg';
+
 const skills = ['SQL', 'Excel', 'Power BI', 'Python', 'AI Tools', 'ETL', 'Statistics', 'PostgreSQL'];
+
+const RESUME_URL = '/Srikar_Raj_Gudems_CV.pdf';
+const RESUME_DOWNLOAD_NAME = "Srikar_Raj_Gudem's CV.pdf";
+
 const Hero = () => {
+  const handleResumeDownload = async (e: MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    try {
+      const res = await fetch(RESUME_URL);
+      if (!res.ok) throw new Error(`Failed to fetch resume: ${res.status}`);
+
+      const blob = await res.blob();
+      const blobUrl = window.URL.createObjectURL(blob);
+
+      const a = document.createElement('a');
+      a.href = blobUrl;
+      a.download = RESUME_DOWNLOAD_NAME;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+
+      window.URL.revokeObjectURL(blobUrl);
+    } catch {
+      // Fallback: navigate to the file
+      window.location.href = RESUME_URL;
+    }
+  };
+
   return <section id="home" className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-secondary/30 via-background to-accent/5">
       {/* Background grid pattern */}
       <div className="absolute inset-0">
@@ -72,8 +101,9 @@ const Hero = () => {
             
             {/* Resume Download Button */}
             <a 
-              href="/Srikar_Raj_Gudems_CV.pdf" 
-              download="Srikar_Raj_Gudem's CV.pdf"
+              href={RESUME_URL}
+              download={RESUME_DOWNLOAD_NAME}
+              onClick={handleResumeDownload}
               className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-accent-foreground rounded-lg font-medium hover:bg-accent/90 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
