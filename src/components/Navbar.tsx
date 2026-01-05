@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import ThemeToggle from './ThemeToggle';
+
 const navLinks = [{
   href: '#home',
   label: 'Home'
@@ -44,8 +46,9 @@ const Navbar = () => {
               </a>)}
           </div>
 
-          {/* CTA Button - Desktop */}
-          <div className="hidden md:block">
+          {/* Theme Toggle & CTA Button - Desktop */}
+          <div className="hidden md:flex items-center gap-3">
+            <ThemeToggle />
             <Button className="bg-accent hover:bg-accent/90 text-accent-foreground rounded-lg px-6 shadow-soft hover:shadow-glow transition-all duration-300" asChild>
               <a href="#contact">Let's Talk</a>
             </Button>
@@ -63,8 +66,9 @@ const Navbar = () => {
               {navLinks.map(link => <a key={link.href} href={link.href} className="text-foreground hover:text-accent hover:bg-accent/5 transition-colors py-3 px-4 rounded-lg font-medium" onClick={() => setIsMobileMenuOpen(false)}>
                   {link.label}
                 </a>)}
-              <div className="pt-4 mt-2 border-t border-border">
-                <Button className="w-full bg-accent hover:bg-accent/90 text-accent-foreground rounded-lg" asChild>
+              <div className="pt-4 mt-2 border-t border-border flex items-center justify-between gap-3">
+                <ThemeToggle />
+                <Button className="flex-1 bg-accent hover:bg-accent/90 text-accent-foreground rounded-lg" asChild>
                   <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>
                     Let's Talk
                   </a>
