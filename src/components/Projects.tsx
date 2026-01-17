@@ -16,6 +16,7 @@ const projects = [
     icon: Database,
     gradient: 'from-accent via-cyan-500 to-teal-400',
     bgPattern: 'radial-gradient(circle at 20% 80%, hsl(var(--accent)/0.3), transparent 40%)',
+    link: 'https://github.com/Srikar-Raj-Gudem/SQL_Micro-Project-On-Online-Book-Store.git',
   },
   {
     title: 'Hospital Emergency Room Dashboard',
@@ -47,7 +48,7 @@ const projects = [
     icon: BarChart,
     gradient: 'from-amber-500 via-orange-500 to-red-400',
     bgPattern: 'radial-gradient(circle at 80% 20%, rgba(251,146,60,0.3), transparent 40%)',
-    comingSoon: true,
+    link: 'https://github.com/Srikar-Raj-Gudem/Power_BI_Micro-Project-On-Mobile-Sales-Dashboard.git',
   },
 ];
 
@@ -109,11 +110,7 @@ const Projects = () => {
                     <span className="inline-block px-4 py-1.5 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium">
                       {project.category}
                     </span>
-                    {project.comingSoon ? (
-                      <span className="px-4 py-1.5 bg-white text-foreground rounded-full text-sm font-semibold">
-                        Coming Soon
-                      </span>
-                    ) : project.link ? (
+                    {project.link ? (
                       <a 
                         href={project.link} 
                         target="_blank" 
