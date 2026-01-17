@@ -18,6 +18,22 @@ const projects = [
     bgPattern: 'radial-gradient(circle at 20% 80%, hsl(var(--accent)/0.3), transparent 40%)',
   },
   {
+    title: 'Hospital Emergency Room Dashboard',
+    category: 'Data Analytics',
+    description: 'Interactive Excel dashboard analyzing hospital ER data including patient demographics, wait times, satisfaction scores, and departmental referrals.',
+    highlights: [
+      'Patient flow analysis',
+      'Wait time optimization',
+      'Satisfaction score tracking',
+      'Departmental insights',
+    ],
+    tags: ['Excel', 'Data Visualization', 'Healthcare Analytics', 'Dashboard'],
+    icon: BarChart,
+    gradient: 'from-emerald-500 via-green-500 to-teal-400',
+    bgPattern: 'radial-gradient(circle at 50% 50%, rgba(16,185,129,0.3), transparent 40%)',
+    link: 'https://github.com/Srikar-Raj-Gudem/Excel_Micro-Project-On-Hospital-Emergency-Room-Analysis-Dashboard.git',
+  },
+  {
     title: 'Power BI Sales Dashboard',
     category: 'Business Intelligence',
     description: 'Interactive dashboard showcasing sales performance metrics, trends, and KPIs for executive decision-making.',
@@ -97,6 +113,15 @@ const Projects = () => {
                       <span className="px-4 py-1.5 bg-white text-foreground rounded-full text-sm font-semibold">
                         Coming Soon
                       </span>
+                    ) : project.link ? (
+                      <a 
+                        href={project.link} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white group-hover:bg-white group-hover:text-foreground transition-colors cursor-pointer"
+                      >
+                        <ArrowUpRight size={20} />
+                      </a>
                     ) : (
                       <div className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center text-white group-hover:bg-white group-hover:text-foreground transition-colors cursor-pointer">
                         <ArrowUpRight size={20} />
