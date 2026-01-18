@@ -6,7 +6,7 @@ import profilePhoto from '@/assets/profile-photo.jpg';
 const skills = ['SQL', 'Excel', 'Power BI', 'Python', 'AI Tools', 'ETL', 'Statistics', 'PostgreSQL'];
 
 const RESUME_URL = '/Srikar_Raj_Gudem_s_CV-3.pdf';
-const RESUME_DOWNLOAD_NAME = "Srikar Raj Gudem's CV.pdf";
+const RESUME_DOWNLOAD_NAME = "Srikar Raj Gudem's Resume.pdf";
 
 const Hero = () => {
   const handleResumeDownload = async (e: MouseEvent<HTMLAnchorElement>) => {
